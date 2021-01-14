@@ -9,4 +9,13 @@ class Curso extends Model
 {
     use HasFactory;
 
+   /* protected $fillable = ['name', 'description', 'categoria'];  se especifica los campos en add masiva */
+
+   protected $guarded = []; /* especifica los campos protegidos y ignoramos los campos permitidos*/
+
+   public function getRouteKeyName(){   //url amigables
+       return 'slug';
+   }
+      
+ 
 }
